@@ -21,10 +21,10 @@ jobs:
           python-version: "3.11"
           cache: "pip"
       - name: Install dependencies
-        run: pip install hatch==1.9.1
+        bash: pip install hatch==1.9.1
       - name: Set up Rust
-        run: rustup show
+        bash: rustup show
       - name: Run Lint
-        run: hatch run lint:style
+        bash: hatch run lint:style
       - name: Run tests
-        run: hatch run test:all
+        bash: hatch run test:all
