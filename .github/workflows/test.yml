@@ -20,8 +20,8 @@ jobs:
           cache: "pip"
       - name: Install dependencies
         run: pip install hatch==1.9.1
-      - name: Install rust
-        run: rustup toolchain install stable --profile minimal
+      - name: Set up Rust
+        run: rustup show
       - name: Run Lint
         run: hatch run lint:style
       - name: Run tests
