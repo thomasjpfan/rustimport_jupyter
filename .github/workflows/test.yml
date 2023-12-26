@@ -1,8 +1,6 @@
 name: Run tests
 on:
   push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -22,8 +20,8 @@ jobs:
           cache: "pip"
       - name: Install dependencies
         run: pip install hatch==1.9.1
-      - name: Set up Rust
-        run: rustup show
+      - name: Install rust
+        run: rustup toolchain install stable --profile minimal
       - name: Run Lint
         run: hatch run lint:style
       - name: Run tests
