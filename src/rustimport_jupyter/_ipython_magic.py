@@ -65,7 +65,7 @@ class RustImportIPython(Magics):
     def rustimport(self, line: str, cell: str):
         args = magic_arguments.parse_argstring(self.rustimport, line)
 
-        lib_path = Path(get_ipython_cache_dir()) / "rustimport"
+        lib_path = Path(get_ipython_cache_dir()) / "rustimport_jupyter"
         lib_path.mkdir(exist_ok=True)
 
         key = [
@@ -83,7 +83,8 @@ class RustImportIPython(Magics):
             key.append(time.time())
 
         module_name = (
-            "_rustimport_magic_" + hashlib.sha1(str(key).encode("utf-8")).hexdigest()  # noqa: S324
+            "_rustimport_jupyter_magic_"
+            + hashlib.sha1(str(key).encode("utf-8")).hexdigest()  # noqa: S324
         )
 
         # PyO3 only allows modules to be loaded once. If module name is already in
