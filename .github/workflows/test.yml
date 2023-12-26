@@ -1,0 +1,30 @@
+name: Run tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        runs-on: [ubuntu-22.04, windows-2022]
+    runs-on: ${{ matrix.runs-on }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install hatch==1.9.1
+      - name: Set up Rust
+        run: rustup show
+      - name: Run Lint
+        run: hatch run lint:style
+      - name: Run tests
+        run: hatch run test:all
