@@ -23,7 +23,7 @@ jobs:
         run: pip install hatch==1.9.1
       - name: Setup rust toolchain
         run: |
-          rustup set default-host x86_64-pc-windows-gnu
+          rustup default stable-x86_64-pc-windows-gnu
         if: runner.os == 'Windows'
       - name: Set up Rust
         run: rustup show
