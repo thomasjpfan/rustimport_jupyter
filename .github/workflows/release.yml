@@ -3,13 +3,32 @@ on:
   push:
 
 jobs:
-  build_wheel:
+  build_wheel_and_sdist:
     name: Build wheels
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - name: Build wheels
-        uses: pypa/cibuildwheel@v2.16.2
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install hatch==1.9.1
+      - name: Build wheel and sdist
+        run: hatch build
       - uses: actions/upload-artifact@v3
         with:
-          path: ./wheelhouse/*.whl
+          name: artifact
+          path: ./dist
+
+  upload_pypi:
+    needs: [build_wheel_and_sdist]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: dist
+
+      - run: ls dist
