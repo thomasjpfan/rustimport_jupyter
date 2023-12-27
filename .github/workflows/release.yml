@@ -1,6 +1,9 @@
 name: Build Wheel and Publish for Releases
 on:
   push:
+  workflow_dispatch:
+  release:
+    types: [published]
 
 jobs:
   build_wheel_and_sdist:
@@ -11,7 +14,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.12"
           cache: "pip"
       - name: Install dependencies
         run: pip install hatch==1.9.1
@@ -25,10 +28,10 @@ jobs:
   upload_pypi:
     needs: [build_wheel_and_sdist]
     runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
     steps:
       - uses: actions/download-artifact@v3
         with:
           name: artifact
           path: dist
-
       - run: ls dist
