@@ -1,6 +1,8 @@
 name: Build Wheel and Publish for Releases
 on:
   push:
+    branches:
+      - "*"
   workflow_dispatch:
   release:
     types: [published]
