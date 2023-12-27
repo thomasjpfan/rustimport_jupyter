@@ -48,8 +48,8 @@ fn square(x: i32) -> i32 {
 
 - For Google Colab, `rustimport_jupyter` and the `rust` toolchain needs to be installed first. This
 [notebook](https://github.com/thomasjpfan/rustimport_jupyter/blob/main/examples/rust_import_colab.ipynb)
-showcases this use case in [Google Colab](http://colab.research.google.com/github/thomasjpfan/rustimport_jupyter/blob/main/examples/rust_import_colab.ipynb).
-- You can use `rustimport_jupyter` to quickly iterate on [Polars expression plugins](https://pola-rs.github.io/polars/user-guide/expressions/plugins/). This [notebook]()
+showcases this use case and is available in [Google Colab](http://colab.research.google.com/github/thomasjpfan/rustimport_jupyter/blob/main/examples/rust_import_colab.ipynb).
+- You can use `rustimport_jupyter` to quickly iterate on [Polars expression plugins](https://pola-rs.github.io/polars/user-guide/expressions/plugins/). This [notebook](https://github.com/thomasjpfan/rustimport_jupyter/blob/main/examples/polars_expression_plugins.ipynb) showcases this use case and is available in [Google Colab](http://colab.research.google.com/github/thomasjpfan/rustimport_jupyter/blob/main/examples/polars_expression_plugins.ipynb).
 
 The `--module-path-variable` parameter outputs the module path
 
