@@ -82,9 +82,9 @@ class RustImportIPython(Magics):
             # Add time to key to force the rebuild
             key.append(time.time())
 
-        module_name = "_rustimport_magic_" + hashlib.shake_256(
-            str(key).encode("utf-8")
-        ).hexdigest(5)
+        module_name = "_magic_" + hashlib.shake_128(str(key).encode("utf-8")).hexdigest(
+            8
+        )
 
         # PyO3 only allows modules to be loaded once. If module name is already in
         # `_loaded_modules`, then the code is already loaded and compilation can be
