@@ -3,7 +3,7 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/rustimport_jupyter.svg)](https://pypi.org/project/rustimport_jupyter)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/rustimport_jupyter.svg)](https://pypi.org/project/rustimport_jupyter)
 
-Jupyter and iPython magic for compiling Python extensions written in Rust.
+Jupyter and iPython magic for compiling Python extensions written in Rust. This project builds on top of [rustimport](https://github.com/mityax/rustimport) by adding a iPython magic.
 
 -----
 
@@ -11,6 +11,7 @@ Jupyter and iPython magic for compiling Python extensions written in Rust.
 
 - [Installation](#installation)
 - [How To Use](#how-to-use)
+- [Examples](#examples)
 - [License](#license)
 
 ## Installation
@@ -43,9 +44,14 @@ fn square(x: i32) -> i32 {
 }
 ```
 
-### Google Colab
+## Examples
 
-For Google Colab, `rustimport_jupyter` and the `rust` toolchain needs to be installed first. Please see this [colab notebook]() for an example.
+- For Google Colab, `rustimport_jupyter` and the `rust` toolchain needs to be installed first. This
+[notebook](https://github.com/thomasjpfan/rustimport_jupyter/blob/main/examples/rust_import_colab.ipynb)
+showcases this use case in [Google Colab](http://colab.research.google.com/github/thomasjpfan/rustimport_jupyter/blob/main/examples/rust_import_colab.ipynb).
+- You can use `rustimport_jupyter` to quickly iterate on [Polars expression plugins](https://pola-rs.github.io/polars/user-guide/expressions/plugins/). This [notebook]()
+
+The `--module-path-variable` parameter outputs the module path
 
 ## License
 
