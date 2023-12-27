@@ -13,13 +13,13 @@ Jupyter and iPython magic for compiling Python extensions written in Rust. This 
 ## How To Use
 
 `rustimport_jupyter` compiles Python extensions written in Rust in Jupyter notebooks.
-To enable this feature load the `rustimport_jupyter` extension from within a Jupyter notebook:
+We enable the feature by loading the `rustimport_jupyter` extension from within a Jupyter notebook:
 
 ```python
 %load_ext rustimport_jupyter
 ```
 
-Then, prefix a cell with the `%%rustimport` marker to compile it:
+Next, we prefix a cell with the `%%rustimport` marker to compile it:
 
 ```rust
 %%rustimport
