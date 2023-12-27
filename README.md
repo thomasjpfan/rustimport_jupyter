@@ -5,23 +5,10 @@
 
 Jupyter and iPython magic for compiling Python extensions written in Rust. This project builds on top of [rustimport](https://github.com/mityax/rustimport) by adding a iPython magic.
 
------
-
-**Table of Contents**
-
-- [Installation](#installation)
-- [How To Use](#how-to-use)
-- [Examples](#examples)
-- [License](#license)
-
 ## Installation
 
-0. Install Rust by following the Rust's [Getting started page](https://www.rust-lang.org/learn/get-started).
-
-1. Install `rustimport_jupyter`:
-```console
-pip install rustimport_jupyter
-```
+0. Install Rust by following Rust's [Getting started Guide](https://www.rust-lang.org/learn/get-started).
+1. Install `rustimport_jupyter`: `pip install rustimport_jupyter`
 
 ## How To Use
 
