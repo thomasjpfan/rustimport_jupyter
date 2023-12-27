@@ -28,6 +28,7 @@ jobs:
   upload_pypi:
     needs: [build_wheel_and_sdist]
     runs-on: ubuntu-latest
+    environment: release
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
       - uses: actions/download-artifact@v3
