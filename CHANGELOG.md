@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.1.2] - TBA
+## [0.1.3] - TBA
+
+## [0.1.2] - 2023-12-27
+
+- Adjusts grammar in README.md
 
 ## [0.1.1] - 2023-12-27
 
