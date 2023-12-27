@@ -8,7 +8,7 @@ Jupyter and iPython magic for compiling Python extensions written in Rust. This 
 ## Installation
 
 0. Install Rust by following Rust's [Getting started Guide](https://www.rust-lang.org/learn/get-started).
-1. Install `rustimport_jupyter`: `pip install rustimport_jupyter`
+1. Install package: `pip install rustimport_jupyter`
 
 ## How To Use
 
