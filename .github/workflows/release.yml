@@ -1,0 +1,15 @@
+name: Build Wheel and Publish for Releases
+on:
+  push:
+
+jobs:
+  build_wheel:
+    name: Build wheels
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.16.2
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./wheelhouse/*.whl
