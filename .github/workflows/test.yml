@@ -21,9 +21,13 @@ jobs:
           cache: "pip"
       - name: Install dependencies
         run: pip install hatch==1.9.1
+      - name: Setup rust toolchain
+        run: |
+          rustup set default-host x86_64-pc-windows-gnu
+        if: runner.os == 'Windows'
       - name: Set up Rust
         run: rustup show
       - name: Run Lint
         run: hatch run lint:style
       - name: Run tests
-        run: hatch run test.py3.8:test -k TestIPythonMagic.test_module_path_variable
+        run: hatch run test.py3.8:test -k test_module_path_variable
