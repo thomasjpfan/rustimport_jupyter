@@ -10,3 +10,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install parse-changelog
         run: cargo +stable install parse-changelog --locked
+      - name: Check there is a changelog for tag
+        run: parse-changelog CHANGELOG.md 0.1.3
