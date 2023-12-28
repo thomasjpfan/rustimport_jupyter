@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.1.3] - TBA
+## [0.1.4] - TBA
+
+## [0.1.3] - 2023-12-27
+
+- Fixes capitalization of IPython (#1)
 
 ## [0.1.2] - 2023-12-27
 
