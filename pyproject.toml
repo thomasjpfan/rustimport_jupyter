@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "rustimport_jupyter"
 dynamic = ["version"]
-description = "Jupyter and iPython magic for compiling Python extensions written in Rust"
+description = "Jupyter and IPython magic for compiling Python extensions written in Rust"
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
