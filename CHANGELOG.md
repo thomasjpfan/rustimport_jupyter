@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.4] - TBA
+## [Unreleased]
 
 ## [0.1.3] - 2023-12-27
 
