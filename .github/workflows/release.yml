@@ -1,0 +1,12 @@
+name: Create release on tag
+
+on:
+  push:
+
+jobs:
+  create-release:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install parse-changelog
+        run: brew install taiki-e/tap/parse-changelog
