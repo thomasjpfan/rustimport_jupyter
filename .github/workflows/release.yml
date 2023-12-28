@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install parse-changelog
-        run: brew install taiki-e/tap/parse-changelog
+        run: cargo +stable install parse-changelog --locked
