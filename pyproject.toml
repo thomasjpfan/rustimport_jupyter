@@ -42,7 +42,7 @@ cov-report = ["- coverage combine", "coverage report"]
 cov = ["test-cov", "cov-report"]
 
 [tool.hatch.envs.lint]
-dependencies = ["mypy>=1.0.0", "ruff>=0.0.243"]
+dependencies = ["ruff>=0.0.243"]
 [tool.hatch.envs.lint.scripts]
 style = ["ruff ."]
 fmt = ["ruff format {args:.}", "ruff --fix {args:.}"]
